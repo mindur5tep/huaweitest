@@ -4,6 +4,10 @@ Algorithm machine test of Huawei Recruitment on Oct.30
 
 ## 第1题-历史行为信任计算
 
+[problem1.md](problem1.md)
+
+[problem1_sol.py](problem1_sol.py)
+
 云计算环境下用户访问行为多样并且复杂，项目组决定根据用户一定时间周期内的最低信任分，控制用户的授权等级。需要设计一个程序，通过分析用户历史信任分序列，输出最小信任分序列。
 
 其中最小信任分为时间周期内的最低信任分。假设历史信任分序列为 $\{x_i\}$ ，时间周期大小为，那么最小信任分 $m_i = \min[x_i,\ x_{i+1}]$ .
@@ -63,6 +67,10 @@ if __name__ == "__main__":
 ```
 
 ## 第2题-序列化热点调用栈树
+
+[problem2.md](problem2.md)
+
+[problem2_sol.py](problem2_sol.py)
 
 调用栈指从主函数执行到某个函数的调用路径，
 
@@ -160,6 +168,10 @@ if __name__ == "__main__":
 
 ## 第3题-公司班车上车点规划-让最远的员工少走点路
 
+[problem3.md](problem3.md)
+
+[problem3_sol.py](problem3_sol.py)
+
 云某公司基地搬迁到新地点之后，新规划了一条班车路线，在这条路线上会经过 $N$ 个小区，计划在这些小区中挑选出 $M$ 个作为上车点，小区的位置可以用一维坐标上的点来表示，小区到上车点的距离为两个坐标点差值的绝对值。
 
 现在给定个 $N$ 小区的位置，即一维坐标上的整数点: $x_1, x_2,...,x_n$ ，我们希望所有小区到最近上车点的距离的最大值尽可能小，请计算这个最大值的最小值能够是多少?当该小区被作为上车点，该小区到上车点的距离为 $0$。
@@ -194,7 +206,7 @@ def func():
 
     N, M = map(int, first_line.split())
     positions = list(map(int, second_line.split()))
-    
+  
         # 二分查找最小的最大差值
     left, right = 0, positions[-1] - positions[0]
     ans = right
